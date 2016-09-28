@@ -53,30 +53,20 @@ CONSTRAINT fk_employee FOREIGN KEY(employee_id) REFERENCES employee(employee_id)
 CONSTRAINT employee_product_ pk PRIMARY KEY(product_id,employee_id)
 );
 
-CREATE TYPE artists_t AS OBJECT(
-  actor varchar(255)
-);
-
-CREATE TYPE movie_actors IS TABLE OF artists_t;
-
 CREATE TABLE movie(
 product_id int not null,
-actors movie_actors,
+lead_actor varchar(255),
 director varchar(255),
 production_company varchar(255) not null,
 CONSTRAINT movie_pk PRIMARY KEY(product_id),
 CONSTRAINT fk_product FOREIGN KEY(product_id) REFERENCES product(product_id)
 );
-NESTED TABLE actors STORE AS movie_actors;
-
-CREATE TYPE musicians IS TABLE OF artists_t;
 
 CREATE TABLE music(
 product_id int not null,
-artists musicians,
+lead_artist varchar(255) not null,
 producer varchar(255) not null,
 record_label varchar(255),
 CONSTRAINT music_pk PRIMARY KEY(product_id),
 CONSTRAINT fk_product FOREIGN KEY(product_id) REFERENCES product(product_id)
 );
-NESTED TABLE artists STORE AS musicians;
