@@ -50,7 +50,7 @@ product_id int not null,
 employee_id int not null,
 CONSTRAINT fk_product FOREIGN KEY(product_id) REFERENCES product(product_id),
 CONSTRAINT fk_employee FOREIGN KEY(employee_id) REFERENCES employee(employee_id),
-CONSTRAINT employee_product_ pk PRIMARY KEY(product_id,employee_id)
+CONSTRAINT employee_product_pk PRIMARY KEY(product_id,employee_id)
 );
 
 CREATE TABLE movie(
@@ -59,7 +59,7 @@ lead_actor varchar(255),
 director varchar(255),
 production_company varchar(255) not null,
 CONSTRAINT movie_pk PRIMARY KEY(product_id),
-CONSTRAINT fk_product FOREIGN KEY(product_id) REFERENCES product(product_id)
+CONSTRAINT fk_prod FOREIGN KEY(product_id) REFERENCES product(product_id)
 );
 
 CREATE TABLE music(
@@ -68,5 +68,5 @@ lead_artist varchar(255) not null,
 producer varchar(255) not null,
 record_label varchar(255),
 CONSTRAINT music_pk PRIMARY KEY(product_id),
-CONSTRAINT fk_product FOREIGN KEY(product_id) REFERENCES product(product_id)
+CONSTRAINT fk_productid FOREIGN KEY(product_id) REFERENCES product(product_id)
 );
