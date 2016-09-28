@@ -48,7 +48,7 @@ CONSTRAINT manufacturer_product__pk PRIMARY KEY(product_id,manufacturer_id)
 CREATE TABLE employee_product(
 product_id int not null,
 employee_id int not null,
-manufacturer_id not null,
+manager_id not null,
 CONSTRAINT fk_product_employee FOREIGN KEY(product_id) REFERENCES product(product_id),
 CONSTRAINT fk_employee_product FOREIGN KEY(employee_id,manager_id) REFERENCES employee(employee_id,manager_id),
 CONSTRAINT employee_product_pk PRIMARY KEY(product_id,employee_id)
