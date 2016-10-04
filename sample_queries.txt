@@ -1,0 +1,39 @@
+SELECT DISTINCT quantity
+FROM product
+WHERE name = “Jurassic World”;
+
+UPDATE product
+SET price = 20
+WHERE name = "Sorceress"
+
+SELECT DISTINCT delivery_status
+FROM product
+WHERE name = "Batman";
+
+SELECT DISTINCT director
+FROM movie
+WHERE lead_actor = “Morgan Freeman”;
+
+SELECT DISTINCT lead_artist
+FROM music
+WHERE producer = “john smith”;
+
+SELECT DISTINCT employee_id
+FROM employee
+WHERE employee_name = “Bob”;
+
+SELECT DISTINCT maufacturer_adress
+FROM manufacturer
+WHERE manufacturer_name = “Century Media Records”;
+
+SELECT DISTINCT manager
+FROM store
+WHERE store_name = “HMV”;
+
+SELECT DISTINCT product_id
+FROM manufacturer_product
+WHERE manufacturer_id = 64457821;
+
+SELECT DISTINCT employee_id
+FROM employee_product
+WHERE product_id = 40913872;
