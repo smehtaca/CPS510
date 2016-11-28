@@ -1,0 +1,4 @@
+SELECT title, quantity
+FROM PRODUCT
+WHERE quantity BETWEEN 20 and 50
+ORDER BY title;

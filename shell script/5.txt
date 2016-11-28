@@ -1,0 +1,4 @@
+SELECT lead_artist, lead_actor, producer
+FROM movie, music
+WHERE movie.lead_actor = music.producer
+ORDER BY lead_artist;

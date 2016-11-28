@@ -1,0 +1,7 @@
+SELECT DISTINCT manufacturer_name FROM manufacturer
+WHERE
+manufacturer_name NOT LIKE 'A%' AND
+manufacturer_name NOT LIKE 'E%' AND
+manufacturer_name NOT LIKE 'I%' AND
+manufacturer_name NOT LIKE 'O%' AND
+manufacturer_name NOT LIKE 'U%';

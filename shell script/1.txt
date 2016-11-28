@@ -1,0 +1,6 @@
+SELECT lead_actor, product_id FROM movie
+WHERE EXISTS
+(SELECT product_id FROM music
+WHERE movie.lead_actor = music.lead_artist
+)
+ORDER BY movie.lead_actor ASC;

@@ -1,0 +1,5 @@
+INSERT INTO employee(employee_name, employee_id, manager_id)
+VALUES ('Four Chan','8','1');
+
+INSERT INTO store(store_name, store_address, manager_id, store_number)
+VALUES('Ryerson Store', '200 Gould Street', '1', '4');
