@@ -1,0 +1,1 @@
+Please open project in Netbeans IDE and click the Play button to run project
